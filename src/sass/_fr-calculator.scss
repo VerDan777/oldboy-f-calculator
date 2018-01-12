@@ -1,0 +1,129 @@
+.fr-calculator {
+    // box model
+    min-height: 100vh;
+
+    // typography
+    font-family: sans-serif;
+    font-size: 0;
+    
+    // visual
+    background-color: #ebe8e4;
+
+    &__title {
+        // box model
+        padding: 20px 0;
+
+        // typography
+        font-size: 24px;
+        text-align: center;
+    }
+
+    &__form {
+        // box model
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 25px;
+
+        // visual
+        box-shadow: 0 0 14px 0 rgba(#222222, 0.25);
+        background-color: #ffffff;
+    }
+
+    &__form-group {
+        // positioning
+        position: relative;
+
+        // box model
+        // margin-bottom: 20px;
+        padding-bottom: 60px;
+        // border: 1px solid red;
+    }
+
+    &__label {
+        // box model
+        display: block;
+        padding-bottom: 5px;
+
+        // typography
+        font-size: 18px;
+    }
+
+    &__input-deco {
+        // positioning
+        position: absolute;
+        top: 32px;
+        right: 10px;
+
+        // typography
+        font-size: 24px;
+    }
+
+    &__input {
+        // box model
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+
+        // typography
+        font-size: 24px;
+    }
+
+    &__range {
+        // box model
+        display: block;
+        width: 100%;
+    }
+
+    &__scale {
+        // positioning
+        position: relative;
+
+        // box model
+        // border: 1px solid red;
+
+        // typography
+        font-size: 12px;
+    }
+
+    &__scale-start {
+        // positioning
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__scale-middle {
+        // positioning
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__scale-end {
+        // positioning
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__profit {
+        // typography
+        text-align: center;
+    }
+
+    &__profit-title {
+        // typography
+        font-size: 24px;
+    }
+
+    &__profit-value {
+        // typography
+        font-size: 42px;
+
+        span {
+            // typography
+            font-size: 0.35em;
+        }
+    }
+}
