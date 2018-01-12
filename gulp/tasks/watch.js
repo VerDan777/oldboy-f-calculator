@@ -16,6 +16,15 @@ gulp.task('watch', () => {
     watch('./src/**/*.scss', () => {
         gulp.start('cssInject');
     })
+
+    watch('./dist/rangeslider.css', () => {
+        gulp.src('./dist/rangeslider.css')
+            .pipe(browserSync.stream());
+    })
+
+    watch("./dist/*.js", () => {
+        browserSync.reload();
+    })
 });
 
 gulp.task('pugChanged', ['pugRender'], () => {

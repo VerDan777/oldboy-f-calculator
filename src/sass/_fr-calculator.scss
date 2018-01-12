@@ -62,7 +62,7 @@
         // box model
         display: block;
         width: 100%;
-        padding: 5px 10px;
+        padding: 8px 10px;
 
         // typography
         font-size: 24px;
@@ -77,11 +77,13 @@
     &__scale {
         // positioning
         position: relative;
+        top: 2px;
 
         // box model
         // border: 1px solid red;
 
         // typography
+        color: #999999;
         font-size: 12px;
     }
 
