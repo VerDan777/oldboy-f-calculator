@@ -1,0 +1,31 @@
+{
+  "name": "oldboy-f-calculator",
+  "version": "1.0.0",
+  "description": "OldBoy Franchise landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nigel-riss/oldboy-fr.git"
+  },
+  "author": "Yuriy Kurenkov, Daniil Vereschagin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nigel-riss/oldboy-fr/issues"
+  },
+  "homepage": "https://github.com/nigel-riss/oldboy-fr#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-pug2": "0.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11",
+    "sass-module-importer": "^1.4.0"
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  }
+}
