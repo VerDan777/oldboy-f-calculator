@@ -388,3 +388,68 @@ template {
  */
 [hidden] {
   display: none; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+.fr-calculator {
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 0;
+  background-color: #ebe8e4; }
+  .fr-calculator__title {
+    padding: 20px 0;
+    font-size: 24px;
+    text-align: center; }
+  .fr-calculator__form {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 25px;
+    box-shadow: 0 0 14px 0 rgba(34, 34, 34, 0.25);
+    background-color: #ffffff; }
+  .fr-calculator__form-group {
+    position: relative;
+    padding-bottom: 60px; }
+  .fr-calculator__label {
+    display: block;
+    padding-bottom: 5px;
+    font-size: 18px; }
+  .fr-calculator__input-deco {
+    position: absolute;
+    top: 32px;
+    right: 10px;
+    font-size: 24px; }
+  .fr-calculator__input {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 24px; }
+  .fr-calculator__range {
+    display: block;
+    width: 100%; }
+  .fr-calculator__scale {
+    position: relative;
+    font-size: 12px; }
+  .fr-calculator__scale-start {
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .fr-calculator__scale-middle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); }
+  .fr-calculator__scale-end {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .fr-calculator__profit {
+    text-align: center; }
+  .fr-calculator__profit-title {
+    font-size: 24px; }
+  .fr-calculator__profit-value {
+    font-size: 42px; }
+    .fr-calculator__profit-value span {
+      font-size: 0.35em; }

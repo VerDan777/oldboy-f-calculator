@@ -7,4 +7,66 @@
   <link rel="stylesheet" href="styles.css"/>
   <title>Document</title>
 </head>
-<body></body>
+<body>
+  <section class="fr-calculator">
+    <h2 class="fr-calculator__title">Расчёт прибыли:</h2>
+    <form class="fr-calculator__form" action="">
+      <div class="fr-calculator__form-group">
+        <label class="fr-calculator__label">Ваша аренда:</label>
+        <div class="fr-calculator__input-deco">₽</div>
+        <input class="fr-calculator__input" type="text" value="125000"/>
+        <input class="fr-calculator__range" type="range" min="0" max="250000" step="1000"/>
+        <div class="fr-calculator__scale">
+          <p class="fr-calculator__scale-start">0</p>
+          <p class="fr-calculator__scale-middle">125 тыс.</p>
+          <p class="fr-calculator__scale-end">250 тыс.</p>
+        </div>
+      </div>
+      <div class="fr-calculator__form-group">
+        <label class="fr-calculator__label">Средний чек:</label>
+        <div class="fr-calculator__input-deco">₽</div>
+        <input class="fr-calculator__input" type="text" value="1500"/>
+        <input class="fr-calculator__range" type="range" min="800" max="2500" step="100" value="1500"/>
+        <div class="fr-calculator__scale">
+          <p class="fr-calculator__scale-start">800 руб.</p>
+          <p class="fr-calculator__scale-middle">1600 руб.</p>
+          <p class="fr-calculator__scale-end">2500 руб.</p>
+        </div>
+      </div>
+      <div class="fr-calculator__form-group">
+        <label class="fr-calculator__label">Расходы на рекламу:</label>
+        <div class="fr-calculator__input-deco">₽</div>
+        <input class="fr-calculator__input" type="text" value="20000"/>
+        <input class="fr-calculator__range" type="range" min="0" max="200000" step="1000" value="20000"/>
+        <div class="fr-calculator__scale">
+          <p class="fr-calculator__scale-start">0 руб.</p>
+          <p class="fr-calculator__scale-middle">100 тыс.</p>
+          <p class="fr-calculator__scale-end">200 тыс.</p>
+        </div>
+      </div>
+      <div class="fr-calculator__form-group">
+        <label class="fr-calculator__label">Процент мастера:</label>
+        <div class="fr-calculator__input-deco">%</div>
+        <input class="fr-calculator__input" type="text" value="40"/>
+        <input class="fr-calculator__range" type="range" min="30" max="50" value="40"/>
+        <div class="fr-calculator__scale">
+          <p class="fr-calculator__scale-start">30%</p>
+          <p class="fr-calculator__scale-end">50%</p>
+        </div>
+      </div>
+      <div class="fr-calculator__form-group">
+        <label class="fr-calculator__label">Количество клиентов:</label>
+        <input class="fr-calculator__input" type="text" value="1000"/>
+        <input class="fr-calculator__range" type="range" min="0" max="2000" value="1000" step="50"/>
+        <div class="fr-calculator__scale">
+          <p class="fr-calculator__scale-start">0 чел.</p>
+          <p class="fr-calculator__scale-end">2000 чел.</p>
+        </div>
+      </div>
+      <div class="fr-calculator__profit">
+        <h2 class="fr-calculator__profit-title">Прибыль:</h2>
+        <p class="fr-calculator__profit-value">150000 <span>рублей</span></p>
+      </div>
+    </form>
+  </section>
+</body>
