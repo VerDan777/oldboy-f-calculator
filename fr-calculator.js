@@ -27,11 +27,26 @@ $(document).ready(function() {
         onSlideEnd: function(position, value) {}
     });
 
+    // 
     function sliderChange(value) {
-        // var currentInput = $(".rangeslider--active").parent().children(".fr-calculator__input");
         var currentInput = $(".rangeslider--active").parent().children(".fr-calculator__input");
         currentInput.val(value);
-        console.log(currentInput.val());
-        console.log(value);
     }
+
+    // return event.charCode >= 48 && event.charCode <= 57;
+    $(".fr-calculator__input").on("keypress", function(event) {
+        // check if numeral input
+        var filterNumerals = event.charCode >= 48 && event.charCode <= 57;
+
+        var minVal = parseInt($(this).parent().children(".fr-calculator__range").prop("min"));
+        var maxVal = parseInt($(this).parent().children(".fr-calculator__range").prop("max"));
+        // check if inside value bounds
+        var filterBounds = $(this).val() >= minVal && $(this).val() <= maxVal;
+        console.log(filterBounds);
+
+        // return filterNumerals && filterBounds;
+        if (!(filterNumerals && filterBounds)) {
+            event.preventDefault();
+        };
+    });
 });
