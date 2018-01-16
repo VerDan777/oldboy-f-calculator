@@ -18,8 +18,8 @@ body
                 .fr-calculator__form-group
                     label.fr-calculator__label Ваша аренда:
                     .fr-calculator__input-deco ₽
-                    input.fr-calculator__input(type="text" value="125000")
-                    input.fr-calculator__range(type="range" min="0" max="250000" step="1000")
+                    input#fc-rent.fr-calculator__input(type="text" value="70000")
+                    input.fr-calculator__range(type="range" min="0" max="250000" step="1000" value="70000")
                     .fr-calculator__scale
                         p.fr-calculator__scale-start 0
                         p.fr-calculator__scale-middle 125 тыс.
@@ -29,8 +29,8 @@ body
                     label.fr-calculator__label Средний чек:<span> i </span>
                         .fr-calculator__popup Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magnam ducimus eos ab numquam dolorum, omnis cum quam odio aut totam id corporis, error quidem iure rem illo a!
                     .fr-calculator__input-deco ₽
-                    input.fr-calculator__input(type="text" value="1500")
-                    input.fr-calculator__range(type="range" min="800" max="2500" step="100" value="1500")
+                    input#fc-average-check.fr-calculator__input(type="text" value="1200")
+                    input.fr-calculator__range(type="range" min="800" max="2500" step="100" value="1200")
                     .fr-calculator__scale
                         p.fr-calculator__scale-start 800 руб.
                         p.fr-calculator__scale-middle 1600 руб.
@@ -40,7 +40,7 @@ body
                     label.fr-calculator__label Расходы на рекламу:<span> i </span>
                         .fr-calculator__popup Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magnam ducimus eos ab numquam dolorum, omnis cum quam odio aut totam id corporis, error quidem iure rem illo a!
                     .fr-calculator__input-deco ₽
-                    input.fr-calculator__input(type="text" value="20000")
+                    input#fc-ads-cost.fr-calculator__input(type="text" value="20000")
                     input.fr-calculator__range(type="range" min="0" max="200000" step="1000" value="20000")
                     .fr-calculator__scale
                         p.fr-calculator__scale-start 0 руб.
@@ -50,9 +50,9 @@ body
             .fr-calculator__right-column
                 .fr-calculator__form-group
                     label.fr-calculator__label Процент мастера:<span> i </span>
-                        .fr-calculator__popup Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magnam ducimus eos ab numquam dolorum, omnis cum quam odio aut totam id corporis, error quidem iure rem illo a!
+                        .fr-calculator__popup Процент мастера от 
                     .fr-calculator__input-deco %
-                    input.fr-calculator__input(type="text" value="40")
+                    input#fc-barber-share.fr-calculator__input(type="text" value="40")
                     input.fr-calculator__range(type="range" min="30" max="50" value="40")
                     .fr-calculator__scale
                         p.fr-calculator__scale-start 30%
@@ -60,15 +60,15 @@ body
 
                 .fr-calculator__form-group
                     label.fr-calculator__label Количество клиентов:
-                    input.fr-calculator__input(type="text" value="1000")
-                    input.fr-calculator__range(type="range" min="0" max="2000" value="1000" step="50")
+                    input#fc-clients-num.fr-calculator__input(type="text" value="350")
+                    input.fr-calculator__range(type="range" min="0" max="2000" value="350" step="25")
                     .fr-calculator__scale
                         p.fr-calculator__scale-start 0 чел.
                         p.fr-calculator__scale-end 2000 чел.
 
             .fr-calculator__profit
                 h2.fr-calculator__profit-title Прибыль:
-                p.fr-calculator__profit-value 150000 <span>рублей</span>
+                p#fc-profit.fr-calculator__profit-value 150000 <span>рублей</span>
     script(src="https://code.jquery.com/jquery-3.2.1.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
     script(src="rangeslider.min.js")
     script(src="fr-calculator.js")
