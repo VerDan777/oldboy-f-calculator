@@ -16,8 +16,8 @@
         <div class="fr-calculator__form-group">
           <label class="fr-calculator__label">Ваша аренда:</label>
           <div class="fr-calculator__input-deco">₽</div>
-          <input class="fr-calculator__input" type="text" value="125000"/>
-          <input class="fr-calculator__range" type="range" min="0" max="250000" step="1000"/>
+          <input class="fr-calculator__input" id="fc-rent" type="text" value="70000"/>
+          <input class="fr-calculator__range" type="range" min="0" max="250000" step="1000" value="70000"/>
           <div class="fr-calculator__scale">
             <p class="fr-calculator__scale-start">0</p>
             <p class="fr-calculator__scale-middle">125 тыс.</p>
@@ -29,8 +29,8 @@
             <div class="fr-calculator__popup">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magnam ducimus eos ab numquam dolorum, omnis cum quam odio aut totam id corporis, error quidem iure rem illo a!</div>
           </label>
           <div class="fr-calculator__input-deco">₽</div>
-          <input class="fr-calculator__input" type="text" value="1500"/>
-          <input class="fr-calculator__range" type="range" min="800" max="2500" step="100" value="1500"/>
+          <input class="fr-calculator__input" id="fc-average-check" type="text" value="1200"/>
+          <input class="fr-calculator__range" type="range" min="800" max="2500" step="100" value="1200"/>
           <div class="fr-calculator__scale">
             <p class="fr-calculator__scale-start">800 руб.</p>
             <p class="fr-calculator__scale-middle">1600 руб.</p>
@@ -42,7 +42,7 @@
             <div class="fr-calculator__popup">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magnam ducimus eos ab numquam dolorum, omnis cum quam odio aut totam id corporis, error quidem iure rem illo a!</div>
           </label>
           <div class="fr-calculator__input-deco">₽</div>
-          <input class="fr-calculator__input" type="text" value="20000"/>
+          <input class="fr-calculator__input" id="fc-ads-cost" type="text" value="20000"/>
           <input class="fr-calculator__range" type="range" min="0" max="200000" step="1000" value="20000"/>
           <div class="fr-calculator__scale">
             <p class="fr-calculator__scale-start">0 руб.</p>
@@ -54,10 +54,10 @@
       <div class="fr-calculator__right-column">
         <div class="fr-calculator__form-group">
           <label class="fr-calculator__label">Процент мастера:<span> i </span>
-            <div class="fr-calculator__popup">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magnam ducimus eos ab numquam dolorum, omnis cum quam odio aut totam id corporis, error quidem iure rem illo a!</div>
+            <div class="fr-calculator__popup">Процент мастера от </div>
           </label>
           <div class="fr-calculator__input-deco">%</div>
-          <input class="fr-calculator__input" type="text" value="40"/>
+          <input class="fr-calculator__input" id="fc-barber-share" type="text" value="40"/>
           <input class="fr-calculator__range" type="range" min="30" max="50" value="40"/>
           <div class="fr-calculator__scale">
             <p class="fr-calculator__scale-start">30%</p>
@@ -66,8 +66,8 @@
         </div>
         <div class="fr-calculator__form-group">
           <label class="fr-calculator__label">Количество клиентов:</label>
-          <input class="fr-calculator__input" type="text" value="1000"/>
-          <input class="fr-calculator__range" type="range" min="0" max="2000" value="1000" step="50"/>
+          <input class="fr-calculator__input" id="fc-clients-num" type="text" value="350"/>
+          <input class="fr-calculator__range" type="range" min="0" max="2000" value="350" step="25"/>
           <div class="fr-calculator__scale">
             <p class="fr-calculator__scale-start">0 чел.</p>
             <p class="fr-calculator__scale-end">2000 чел.</p>
@@ -76,7 +76,7 @@
       </div>
       <div class="fr-calculator__profit">
         <h2 class="fr-calculator__profit-title">Прибыль:</h2>
-        <p class="fr-calculator__profit-value">150000 <span>рублей</span></p>
+        <p class="fr-calculator__profit-value" id="fc-profit">150000 <span>рублей</span></p>
       </div>
     </form>
   </section>
