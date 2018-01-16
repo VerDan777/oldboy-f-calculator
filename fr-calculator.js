@@ -68,30 +68,50 @@ $(document).ready(function() {
     var $clientsNum     = $("#fc-clients-num");
     var $expenses       = $("#fc-expenses");
     var $reception      = $("#fc-receptionist");
+    var $tax            = $("#fc-tax");
+    var $cosmetics      = $("#fc-cosmetics");
     var $royalty        = $("#fc-royalty");
     
     function calcProfit() {
         // getting field values
-        var rent = parseInt($rent.val());
-        var avgCheck = parseInt($avgCheck.val());
-        var adsCost = parseInt($adsCost.val());
-        var barberShare = parseInt($barberShare.val());
-        var clientsNum = parseInt($clientsNum.val());
-        var expenses = parseInt($expenses.val());
-        var reception = parseInt($reception.val());
+        var rent            = parseInt($rent.val());
+        var avgCheck        = parseInt($avgCheck.val());
+        var adsCost         = parseInt($adsCost.val());
+        var barberShare     = parseInt($barberShare.val());
+        var clientsNum      = parseInt($clientsNum.val());
+        var expenses        = parseInt($expenses.val());
+        var reception       = parseInt($reception.val());
+        var tax             = parseInt($tax.val());
 
         // counting profit
         var VISITS_PER_MONTH = 1;
-        // var CLEANUP_N_OTHER = 10000;
-        // var RECEPTIONIST_SALARY = 45000;
         var income = clientsNum * avgCheck * VISITS_PER_MONTH;
         var barbersSalary = barberShare * income / 100;
         var shavingCosts = 30 * clientsNum * VISITS_PER_MONTH;
+        var taxInMoney = income * tax / 100;
+
+        var cosmetics = calcCosmetics(income);
         
         var royalty = calcRoyalty(income);
 
-        var profit = income - rent - expenses - reception - adsCost - shavingCosts - barbersSalary;
+        var profit = income 
+                    - rent 
+                    - expenses 
+                    - reception 
+                    - adsCost 
+                    - shavingCosts 
+                    - barbersSalary 
+                    - taxInMoney
+                    + cosmetics
+                    - royalty;
         setProfit(profit);
+    }
+
+    // calculating cosmetics revenue
+    function calcCosmetics(income) {
+        var revenue = parseInt(income * 10 / 100);
+        $cosmetics.val(revenue);
+        return revenue;
     }
 
     // calculating royalty

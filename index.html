@@ -59,6 +59,13 @@
             <p class="fr-calculator__scale-end">50 тыс.</p>
           </div>
         </div>
+        <div class="fr-calculator__form-group">
+          <label class="fr-calculator__label">Доход с косметики:<span> i </span>
+            <div class="fr-calculator__popup">Не менее 10% с оборота.</div>
+          </label>
+          <div class="fr-calculator__input-deco">₽</div>
+          <input class="fr-calculator__input" id="fc-cosmetics" type="text" value="45000" disabled="disabled"/>
+        </div>
       </div>
       <div class="fr-calculator__right-column">
         <div class="fr-calculator__form-group">
@@ -100,12 +107,28 @@
           </div>
         </div>
         <div class="fr-calculator__form-group">
+          <label class="fr-calculator__label">Налоговая ставка:<span> i </span>
+            <div class="fr-calculator__popup">Обычно:
+              <ul>
+                <li>6% для УСН</li>
+                <li>3% для УСН с безнала («серая» схема)</li>
+              </ul>
+            </div>
+          </label>
+          <div class="fr-calculator__input-deco">%</div>
+          <input class="fr-calculator__input" id="fc-tax" type="text" value="6"/>
+          <input class="fr-calculator__range" type="range" min="0" max="6" value="6"/>
+          <div class="fr-calculator__scale">
+            <p class="fr-calculator__scale-start">0%</p>
+            <p class="fr-calculator__scale-end">6%</p>
+          </div>
+        </div>
+        <div class="fr-calculator__form-group">
           <label class="fr-calculator__label">Роялти:<span> i </span>
             <div class="fr-calculator__popup">5% от оборота, но не более 30 000 рублей.</div>
           </label>
           <div class="fr-calculator__input-deco">₽</div>
           <input class="fr-calculator__input" id="fc-royalty" type="text" value="45000" disabled="disabled"/>
-          <div class="fr-calculator__scale"></div>
         </div>
       </div>
       <div class="fr-calculator__profit">
