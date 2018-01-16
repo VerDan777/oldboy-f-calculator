@@ -25,9 +25,7 @@
           </div>
         </div>
         <div class="fr-calculator__form-group">
-          <label class="fr-calculator__label">Средний чек:<span> i </span>
-            <div class="fr-calculator__popup">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magnam ducimus eos ab numquam dolorum, omnis cum quam odio aut totam id corporis, error quidem iure rem illo a!</div>
-          </label>
+          <label class="fr-calculator__label">Средний чек на услуги:</label>
           <div class="fr-calculator__input-deco">₽</div>
           <input class="fr-calculator__input" id="fc-average-check" type="text" value="1200"/>
           <input class="fr-calculator__range" type="range" min="800" max="2500" step="100" value="1200"/>
@@ -38,9 +36,7 @@
           </div>
         </div>
         <div class="fr-calculator__form-group">
-          <label class="fr-calculator__label">Расходы на рекламу:<span> i </span>
-            <div class="fr-calculator__popup">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magnam ducimus eos ab numquam dolorum, omnis cum quam odio aut totam id corporis, error quidem iure rem illo a!</div>
-          </label>
+          <label class="fr-calculator__label">Расходы на рекламу:</label>
           <div class="fr-calculator__input-deco">₽</div>
           <input class="fr-calculator__input" id="fc-ads-cost" type="text" value="20000"/>
           <input class="fr-calculator__range" type="range" min="0" max="200000" step="1000" value="20000"/>
@@ -50,11 +46,30 @@
             <p class="fr-calculator__scale-end">200 тыс.</p>
           </div>
         </div>
+        <div class="fr-calculator__form-group">
+          <label class="fr-calculator__label">Комунальные расходы:<span> i </span>
+            <div class="fr-calculator__popup">Расходы на электричество, воду, отопление и прочие комунальные расходы.</div>
+          </label>
+          <div class="fr-calculator__input-deco">₽</div>
+          <input class="fr-calculator__input" id="fc-expenses" type="text" value="10000"/>
+          <input class="fr-calculator__range" type="range" min="0" max="50000" step="1000" value="10000"/>
+          <div class="fr-calculator__scale">
+            <p class="fr-calculator__scale-start">0</p>
+            <p class="fr-calculator__scale-middle">25 тыс.</p>
+            <p class="fr-calculator__scale-end">50 тыс.</p>
+          </div>
+        </div>
       </div>
       <div class="fr-calculator__right-column">
         <div class="fr-calculator__form-group">
           <label class="fr-calculator__label">Процент мастера:<span> i </span>
-            <div class="fr-calculator__popup">Процент мастера от </div>
+            <div class="fr-calculator__popup">Процент мастера от стоимости услуг.<br>Обычно:
+              <ul>
+                <li>30% для новичков</li>
+                <li>40% для обычных мастеров</li>
+                <li>50% для мастеров со стажем (шеф-мастеров)</li>
+              </ul>
+            </div>
           </label>
           <div class="fr-calculator__input-deco">%</div>
           <input class="fr-calculator__input" id="fc-barber-share" type="text" value="40"/>
@@ -72,6 +87,25 @@
             <p class="fr-calculator__scale-start">0 чел.</p>
             <p class="fr-calculator__scale-end">2000 чел.</p>
           </div>
+        </div>
+        <div class="fr-calculator__form-group">
+          <label class="fr-calculator__label">Зарплата администраторам:</label>
+          <div class="fr-calculator__input-deco">₽</div>
+          <input class="fr-calculator__input" id="fc-receptionist" type="text" value="45000"/>
+          <input class="fr-calculator__range" type="range" min="0" max="80000" step="1000" value="45000"/>
+          <div class="fr-calculator__scale">
+            <p class="fr-calculator__scale-start">0</p>
+            <p class="fr-calculator__scale-middle">40 тыс.</p>
+            <p class="fr-calculator__scale-end">80 тыс.</p>
+          </div>
+        </div>
+        <div class="fr-calculator__form-group">
+          <label class="fr-calculator__label">Роялти:<span> i </span>
+            <div class="fr-calculator__popup">5% от оборота, но не более 30 000 рублей.</div>
+          </label>
+          <div class="fr-calculator__input-deco">₽</div>
+          <input class="fr-calculator__input" id="fc-royalty" type="text" value="45000" disabled="disabled"/>
+          <div class="fr-calculator__scale"></div>
         </div>
       </div>
       <div class="fr-calculator__profit">

@@ -35,7 +35,7 @@ $(document).ready(function() {
     function sliderChange(value) {
         var currentInput = $(".rangeslider--active").parent().children(".fr-calculator__input");
         currentInput.val(value);
-        setProfit();
+        calcProfit();
     }
 
     // return event.charCode >= 48 && event.charCode <= 57;
@@ -66,6 +66,9 @@ $(document).ready(function() {
     var $adsCost        = $("#fc-ads-cost");
     var $barberShare    = $("#fc-barber-share");
     var $clientsNum     = $("#fc-clients-num");
+    var $expenses       = $("#fc-expenses");
+    var $reception      = $("#fc-receptionist");
+    var $royalty        = $("#fc-royalty");
     
     function calcProfit() {
         // getting field values
@@ -74,24 +77,35 @@ $(document).ready(function() {
         var adsCost = parseInt($adsCost.val());
         var barberShare = parseInt($barberShare.val());
         var clientsNum = parseInt($clientsNum.val());
+        var expenses = parseInt($expenses.val());
+        var reception = parseInt($reception.val());
 
         // counting profit
         var VISITS_PER_MONTH = 1;
-        var CLEANUP_N_OTHER = 10000;
-        var RECEPTIONIST_SALARY = 45000;
+        // var CLEANUP_N_OTHER = 10000;
+        // var RECEPTIONIST_SALARY = 45000;
         var income = clientsNum * avgCheck * VISITS_PER_MONTH;
         var barbersSalary = barberShare * income / 100;
         var shavingCosts = 30 * clientsNum * VISITS_PER_MONTH;
+        
+        var royalty = calcRoyalty(income);
 
-        var profit = income - rent - CLEANUP_N_OTHER - RECEPTIONIST_SALARY - adsCost - shavingCosts - barbersSalary;
+        var profit = income - rent - expenses - reception - adsCost - shavingCosts - barbersSalary;
+        setProfit(profit);
+    }
 
-        return parseInt(profit);
+    // calculating royalty
+    function calcRoyalty(income) {
+        var royalty = Math.min(30000, parseInt(income * 0.05));
+        $royalty.val(Math.max(royalty, 0));
+
+        return royalty;
     }
 
     // setting profit field
-    function setProfit() {
-        $("#fc-profit").html(calcProfit() + " <span>рублей</span>");
+    function setProfit(profit) {
+        $("#fc-profit").html(parseInt(profit) + " <span>рублей</span>");
     }
 
-    setProfit();
+    calcProfit();
 });

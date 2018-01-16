@@ -26,8 +26,9 @@ body
                         p.fr-calculator__scale-end 250 тыс.
                         
                 .fr-calculator__form-group
-                    label.fr-calculator__label Средний чек:<span> i </span>
-                        .fr-calculator__popup Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magnam ducimus eos ab numquam dolorum, omnis cum quam odio aut totam id corporis, error quidem iure rem illo a!
+                    label.fr-calculator__label Средний чек на услуги:
+                    //- <span> i </span>
+                    //-     .fr-calculator__popup Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magnam ducimus eos ab numquam dolorum, omnis cum quam odio aut totam id corporis, error quidem iure rem illo a!
                     .fr-calculator__input-deco ₽
                     input#fc-average-check.fr-calculator__input(type="text" value="1200")
                     input.fr-calculator__range(type="range" min="800" max="2500" step="100" value="1200")
@@ -37,8 +38,9 @@ body
                         p.fr-calculator__scale-end 2500 руб.
 
                 .fr-calculator__form-group
-                    label.fr-calculator__label Расходы на рекламу:<span> i </span>
-                        .fr-calculator__popup Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magnam ducimus eos ab numquam dolorum, omnis cum quam odio aut totam id corporis, error quidem iure rem illo a!
+                    label.fr-calculator__label Расходы на рекламу:
+                    //- <span> i </span>
+                    //-     .fr-calculator__popup Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magnam ducimus eos ab numquam dolorum, omnis cum quam odio aut totam id corporis, error quidem iure rem illo a!
                     .fr-calculator__input-deco ₽
                     input#fc-ads-cost.fr-calculator__input(type="text" value="20000")
                     input.fr-calculator__range(type="range" min="0" max="200000" step="1000" value="20000")
@@ -47,10 +49,26 @@ body
                         p.fr-calculator__scale-middle 100 тыс.
                         p.fr-calculator__scale-end 200 тыс.
 
+                .fr-calculator__form-group
+                    label.fr-calculator__label Комунальные расходы:<span> i </span>
+                        .fr-calculator__popup Расходы на электричество, воду, отопление и прочие комунальные расходы.
+
+                    .fr-calculator__input-deco ₽
+                    input#fc-expenses.fr-calculator__input(type="text" value="10000")
+                    input.fr-calculator__range(type="range" min="0" max="50000" step="1000" value="10000")
+                    .fr-calculator__scale
+                        p.fr-calculator__scale-start 0
+                        p.fr-calculator__scale-middle 25 тыс.
+                        p.fr-calculator__scale-end 50 тыс.
+
             .fr-calculator__right-column
                 .fr-calculator__form-group
                     label.fr-calculator__label Процент мастера:<span> i </span>
-                        .fr-calculator__popup Процент мастера от 
+                        .fr-calculator__popup Процент мастера от стоимости услуг.<br>Обычно:
+                            ul
+                                li 30% для новичков
+                                li 40% для обычных мастеров
+                                li 50% для мастеров со стажем (шеф-мастеров)
                     .fr-calculator__input-deco %
                     input#fc-barber-share.fr-calculator__input(type="text" value="40")
                     input.fr-calculator__range(type="range" min="30" max="50" value="40")
@@ -65,6 +83,28 @@ body
                     .fr-calculator__scale
                         p.fr-calculator__scale-start 0 чел.
                         p.fr-calculator__scale-end 2000 чел.
+
+                .fr-calculator__form-group
+                    label.fr-calculator__label Зарплата администраторам:
+                    .fr-calculator__input-deco ₽
+                    input#fc-receptionist.fr-calculator__input(type="text" value="45000")
+                    input.fr-calculator__range(type="range" min="0" max="80000" step="1000" value="45000")
+                    .fr-calculator__scale
+                        p.fr-calculator__scale-start 0
+                        p.fr-calculator__scale-middle 40 тыс.
+                        p.fr-calculator__scale-end 80 тыс.
+                        
+                .fr-calculator__form-group
+                    label.fr-calculator__label Роялти:<span> i </span>
+                        .fr-calculator__popup 5% от оборота, но не более 30 000 рублей.
+                    .fr-calculator__input-deco ₽
+                    input#fc-royalty.fr-calculator__input(type="text" value="45000" disabled)
+                    //- input.fr-calculator__range(type="range" min="0" max="80000" step="1000" value="45000")
+                    .fr-calculator__scale
+                        //- p.fr-calculator__scale-start 5% но не более 30 000 рублей
+                        //- p.fr-calculator__scale-middle 40 тыс.
+                        //- p.fr-calculator__scale-end 80 тыс.
+                        
 
             .fr-calculator__profit
                 h2.fr-calculator__profit-title Прибыль:
