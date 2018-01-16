@@ -61,6 +61,13 @@ body
                         p.fr-calculator__scale-middle 25 тыс.
                         p.fr-calculator__scale-end 50 тыс.
 
+                .fr-calculator__form-group
+                    label.fr-calculator__label Доход с косметики:<span> i </span>
+                        .fr-calculator__popup Не менее 10% с оборота.
+                    .fr-calculator__input-deco ₽
+                    input#fc-cosmetics.fr-calculator__input(type="text" value="45000" disabled)
+                        
+
             .fr-calculator__right-column
                 .fr-calculator__form-group
                     label.fr-calculator__label Процент мастера:<span> i </span>
@@ -93,18 +100,25 @@ body
                         p.fr-calculator__scale-start 0
                         p.fr-calculator__scale-middle 40 тыс.
                         p.fr-calculator__scale-end 80 тыс.
+
+                .fr-calculator__form-group
+                    label.fr-calculator__label Налоговая ставка:<span> i </span>
+                        .fr-calculator__popup Обычно:
+                            ul
+                                li 6% для УСН
+                                li 3% для УСН с безнала («серая» схема)
+                    .fr-calculator__input-deco %
+                    input#fc-tax.fr-calculator__input(type="text" value="6")
+                    input.fr-calculator__range(type="range" min="0" max="6" value="6")
+                    .fr-calculator__scale
+                        p.fr-calculator__scale-start 0%
+                        p.fr-calculator__scale-end 6%
                         
                 .fr-calculator__form-group
                     label.fr-calculator__label Роялти:<span> i </span>
                         .fr-calculator__popup 5% от оборота, но не более 30 000 рублей.
                     .fr-calculator__input-deco ₽
                     input#fc-royalty.fr-calculator__input(type="text" value="45000" disabled)
-                    //- input.fr-calculator__range(type="range" min="0" max="80000" step="1000" value="45000")
-                    .fr-calculator__scale
-                        //- p.fr-calculator__scale-start 5% но не более 30 000 рублей
-                        //- p.fr-calculator__scale-middle 40 тыс.
-                        //- p.fr-calculator__scale-end 80 тыс.
-                        
 
             .fr-calculator__profit
                 h2.fr-calculator__profit-title Прибыль:
