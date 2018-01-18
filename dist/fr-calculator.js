@@ -40,7 +40,12 @@ $(document).ready(function() {
 
     // return event.charCode >= 48 && event.charCode <= 57;
     // fields input handler
+    $(".fr-calculator__input").on("focus", function(event) {
+        event.preventDefault();
+    });
+    
     $(".fr-calculator__input").on("keypress", function(event) {
+        event.preventDefault();
         // check if numeral input
         var filterNumerals = event.charCode >= 48 && event.charCode <= 57;
 

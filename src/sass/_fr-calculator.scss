@@ -170,6 +170,11 @@
         
         // typography
         font-size: 24px;
+
+        &:focus {
+            // visual
+            outline-color: #ce9951;
+        }
     }
     
     &__range {
@@ -182,15 +187,29 @@
         // box model
         display: block;
         width: 100%;
+        height: 47px;
         margin-bottom: 3px;
-        padding: 8px 10px;
+        padding: 0px 10px;
+
         
         // typography
         font-size: 24px;
+
+        &:focus {
+            // visual
+            outline-color: #ce9951;
+        }
         
         option {
             // box model
             padding: 8px 10px;
+
+            &:focus,
+            &:hover,
+            &:checked {
+                // visual
+                box-shadow: 0 0 10px 100px #ce9951 inset;
+            }
         }
     }
 
