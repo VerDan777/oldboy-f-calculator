@@ -28,7 +28,7 @@
           <label class="fr-calculator__label">Средний чек на услуги:</label>
           <div class="fr-calculator__input-deco">₽</div>
           <input class="fr-calculator__input" id="fc-average-check" type="text" value="1200"/>
-          <input class="fr-calculator__range" type="range" min="800" max="2500" step="100" value="1200"/>
+          <input class="fr-calculator__range" type="range" min="800" max="2500" step="25" value="1200"/>
           <div class="fr-calculator__scale">
             <p class="fr-calculator__scale-start">800 руб.</p>
             <p class="fr-calculator__scale-middle">1600 руб.</p>
@@ -60,8 +60,15 @@
           </div>
         </div>
         <div class="fr-calculator__form-group">
+          <label class="fr-calculator__label">Расходники:<span> i </span>
+            <div class="fr-calculator__popup">Расходы на оказание услуги (угощение, лезвия, салфетки и т. п.)</div>
+          </label>
+          <div class="fr-calculator__input-deco">₽</div>
+          <input class="fr-calculator__input" id="fc-consumables" type="text" value="100500" disabled="disabled"/>
+        </div>
+        <div class="fr-calculator__form-group">
           <label class="fr-calculator__label">Доход с косметики:<span> i </span>
-            <div class="fr-calculator__popup">Не менее 10% с оборота.</div>
+            <div class="fr-calculator__popup">Продажи косметики не менее 15% с оборота. С учётом наценки на косметику в 200%, прибыль от продажи косметики получается 10% от оборота по услугам.</div>
           </label>
           <div class="fr-calculator__input-deco">₽</div>
           <input class="fr-calculator__input" id="fc-cosmetics" type="text" value="45000" disabled="disabled"/>
@@ -69,15 +76,7 @@
       </div>
       <div class="fr-calculator__right-column">
         <div class="fr-calculator__form-group">
-          <label class="fr-calculator__label">Процент мастера:<span> i </span>
-            <div class="fr-calculator__popup">Процент мастера от стоимости услуг.<br>Обычно:
-              <ul>
-                <li>30% для новичков</li>
-                <li>40% для обычных мастеров</li>
-                <li>50% для мастеров со стажем (шеф-мастеров)</li>
-              </ul>
-            </div>
-          </label>
+          <label class="fr-calculator__label">Процент мастера:</label>
           <div class="fr-calculator__input-deco">%</div>
           <input class="fr-calculator__input" id="fc-barber-share" type="text" value="40"/>
           <input class="fr-calculator__range" type="range" min="30" max="50" value="40"/>
@@ -108,20 +107,26 @@
         </div>
         <div class="fr-calculator__form-group">
           <label class="fr-calculator__label">Налоговая ставка:<span> i </span>
-            <div class="fr-calculator__popup">Обычно:
+            <div class="fr-calculator__popup">
               <ul>
                 <li>6% для УСН</li>
-                <li>3% для УСН с безнала («серая» схема)</li>
+                <li>3% для УСН с безнала («серая» схема, примерно 50% чеков идёт безналом)</li>
+                <li>Патент 56 000 Рублей в год</li>
               </ul>
             </div>
           </label>
-          <div class="fr-calculator__input-deco">%</div>
-          <input class="fr-calculator__input" id="fc-tax" type="text" value="6"/>
-          <input class="fr-calculator__range" type="range" min="0" max="6" value="6"/>
-          <div class="fr-calculator__scale">
-            <p class="fr-calculator__scale-start">0%</p>
-            <p class="fr-calculator__scale-end">6%</p>
-          </div>
+          <select class="fr-calculator__select" id="fc-tax" name="">
+            <option value="usn6">УСН</option>
+            <option value="usn3">УСН с безнала</option>
+            <option value="patent">Патент</option>
+          </select>
+        </div>
+        <div class="fr-calculator__form-group">
+          <label class="fr-calculator__label">Эквайринг:<span> i </span>
+            <div class="fr-calculator__popup">0.8% от оборота (с учётом, что примерно пловина операций проходит по безналу).</div>
+          </label>
+          <div class="fr-calculator__input-deco">₽</div>
+          <input class="fr-calculator__input" id="fc-acquiring" type="text" value="12345" disabled="disabled"/>
         </div>
         <div class="fr-calculator__form-group">
           <label class="fr-calculator__label">Роялти:<span> i </span>

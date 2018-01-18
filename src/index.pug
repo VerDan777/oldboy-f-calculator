@@ -31,7 +31,7 @@ body
                     //-     .fr-calculator__popup Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magnam ducimus eos ab numquam dolorum, omnis cum quam odio aut totam id corporis, error quidem iure rem illo a!
                     .fr-calculator__input-deco ₽
                     input#fc-average-check.fr-calculator__input(type="text" value="1200")
-                    input.fr-calculator__range(type="range" min="800" max="2500" step="100" value="1200")
+                    input.fr-calculator__range(type="range" min="800" max="2500" step="25" value="1200")
                     .fr-calculator__scale
                         p.fr-calculator__scale-start 800 руб.
                         p.fr-calculator__scale-middle 1600 руб.
@@ -52,7 +52,6 @@ body
                 .fr-calculator__form-group
                     label.fr-calculator__label Комунальные расходы:<span> i </span>
                         .fr-calculator__popup Расходы на электричество, воду, отопление и прочие комунальные расходы.
-
                     .fr-calculator__input-deco ₽
                     input#fc-expenses.fr-calculator__input(type="text" value="10000")
                     input.fr-calculator__range(type="range" min="0" max="50000" step="1000" value="10000")
@@ -62,20 +61,27 @@ body
                         p.fr-calculator__scale-end 50 тыс.
 
                 .fr-calculator__form-group
+                    label.fr-calculator__label Расходники:<span> i </span>
+                        .fr-calculator__popup Расходы на оказание услуги (угощение, лезвия, салфетки и т. п.)
+                    .fr-calculator__input-deco ₽
+                    input#fc-consumables.fr-calculator__input(type="text" value="100500" disabled)
+
+                .fr-calculator__form-group
                     label.fr-calculator__label Доход с косметики:<span> i </span>
-                        .fr-calculator__popup Не менее 10% с оборота.
+                        .fr-calculator__popup Продажи косметики не менее 15% с оборота. С учётом наценки на косметику в 200%, прибыль от продажи косметики получается 10% от оборота по услугам.
                     .fr-calculator__input-deco ₽
                     input#fc-cosmetics.fr-calculator__input(type="text" value="45000" disabled)
-                        
+
 
             .fr-calculator__right-column
                 .fr-calculator__form-group
-                    label.fr-calculator__label Процент мастера:<span> i </span>
-                        .fr-calculator__popup Процент мастера от стоимости услуг.<br>Обычно:
-                            ul
-                                li 30% для новичков
-                                li 40% для обычных мастеров
-                                li 50% для мастеров со стажем (шеф-мастеров)
+                    label.fr-calculator__label Процент мастера:
+                    //- <span> i </span>
+                        //- .fr-calculator__popup Процент мастера от стоимости услуг.<br>Обычно:
+                        //-     ul
+                        //-         li 30% для новичков
+                        //-         li 40% для обычных мастеров
+                        //-         li 50% для мастеров со стажем (шеф-мастеров)
                     .fr-calculator__input-deco %
                     input#fc-barber-share.fr-calculator__input(type="text" value="40")
                     input.fr-calculator__range(type="range" min="30" max="50" value="40")
@@ -103,16 +109,29 @@ body
 
                 .fr-calculator__form-group
                     label.fr-calculator__label Налоговая ставка:<span> i </span>
-                        .fr-calculator__popup Обычно:
+                        .fr-calculator__popup
                             ul
                                 li 6% для УСН
-                                li 3% для УСН с безнала («серая» схема)
-                    .fr-calculator__input-deco %
-                    input#fc-tax.fr-calculator__input(type="text" value="6")
-                    input.fr-calculator__range(type="range" min="0" max="6" value="6")
-                    .fr-calculator__scale
-                        p.fr-calculator__scale-start 0%
-                        p.fr-calculator__scale-end 6%
+                                li 3% для УСН с безнала («серая» схема, примерно 50% чеков идёт безналом)
+                                li Патент 56 000 Рублей в год
+                                //- li «Доход-расход» — 15% с прибыли
+                    //- .fr-calculator__input-deco %
+                    //- input#fc-tax.fr-calculator__input(type="text" value="6")
+                    //- input.fr-calculator__range(type="range" min="0" max="6" value="6")
+                    //- .fr-calculator__scale
+                    //-     p.fr-calculator__scale-start 0%
+                    //-     p.fr-calculator__scale-end 6%
+                    select#fc-tax.fr-calculator__select(name="")
+                        option(value="usn6") УСН
+                        option(value="usn3") УСН с безнала
+                        option(value="patent") Патент
+                        //- option(value="profit") Доход - расход
+                        
+                .fr-calculator__form-group
+                    label.fr-calculator__label Эквайринг:<span> i </span>
+                        .fr-calculator__popup 0.8% от оборота (с учётом, что примерно пловина операций проходит по безналу).
+                    .fr-calculator__input-deco ₽
+                    input#fc-acquiring.fr-calculator__input(type="text" value="12345" disabled)
                         
                 .fr-calculator__form-group
                     label.fr-calculator__label Роялти:<span> i </span>

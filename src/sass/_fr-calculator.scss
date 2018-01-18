@@ -167,15 +167,31 @@
         display: block;
         width: 100%;
         padding: 8px 10px;
-
+        
         // typography
         font-size: 24px;
     }
-
+    
     &__range {
         // box model
         display: block;
         width: 45%;
+    }
+    
+    &__select {
+        // box model
+        display: block;
+        width: 100%;
+        margin-bottom: 3px;
+        padding: 8px 10px;
+        
+        // typography
+        font-size: 24px;
+        
+        option {
+            // box model
+            padding: 8px 10px;
+        }
     }
 
     &__scale {
