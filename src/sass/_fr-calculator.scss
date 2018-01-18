@@ -1,6 +1,10 @@
+$tabletsPortrait: 700px;
+$desktop: 1200px;
+
 .fr-calculator {
     // box model
     min-height: 100vh;
+    padding: 60px 0;
 
     // typography
     font-family: sans-serif;
@@ -8,6 +12,11 @@
     
     // visual
     background-color: #ebe8e4;
+
+    @media (min-width: $tabletsPortrait) {
+        // box model
+        padding: 60px;
+    }
 
     &__title {
         // box model
@@ -29,14 +38,27 @@
         box-shadow: 0 0 14px 0 rgba(#222222, 0.25);
         background-color: #ffffff;
 
-        @media (min-width: 769px) {
+        @media (min-width: $tabletsPortrait) {
             // box model
             padding: 60px;
+        }
+
+        @media (min-width: $desktop) {
+            max-width: 1100px;
+        }
+    }
+
+    &__wrapper {
+        @media (min-width: $tabletsPortrait) {
+            // box model
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
     }
 
     &__left-column {
-        @media (min-width: 769px) {
+        @media (min-width: $tabletsPortrait) {
             // box model
             float: left;
             width: 45%;
@@ -44,7 +66,7 @@
     }
 
     &__right-column {
-        @media (min-width: 769px) {
+        @media (min-width: $tabletsPortrait) {
             // box model
             float: right;
             width: 45%;
@@ -59,6 +81,17 @@
         // margin-bottom: 20px;
         padding-bottom: 50px;
         // border: 1px solid red;
+
+        @media (min-width: $tabletsPortrait) {
+            // box model
+            width: 300px;
+            width: 47%;
+        }
+
+        @media (min-width: $desktop) {
+            // box model
+            width: 30%;
+        }
     }
 
     &__label {

@@ -14,9 +14,10 @@ body
     section.fr-calculator
         h2.fr-calculator__title Расчёт прибыли:
         form.fr-calculator__form(action="")
-            .fr-calculator__left-column
+            //- .fr-calculator__left-column
+            .fr-calculator__wrapper
                 .fr-calculator__form-group
-                    label.fr-calculator__label Ваша аренда:
+                    label.fr-calculator__label Арендная плата:
                     .fr-calculator__input-deco ₽
                     input#fc-rent.fr-calculator__input(type="text" value="70000")
                     input.fr-calculator__range(type="range" min="0" max="250000" step="1000" value="70000")
@@ -60,20 +61,6 @@ body
                         p.fr-calculator__scale-middle 25 тыс.
                         p.fr-calculator__scale-end 50 тыс.
 
-                .fr-calculator__form-group
-                    label.fr-calculator__label Расходники:<span> i </span>
-                        .fr-calculator__popup Расходы на оказание услуги (угощение, лезвия, салфетки и т. п.)
-                    .fr-calculator__input-deco ₽
-                    input#fc-consumables.fr-calculator__input(type="text" value="100500" disabled)
-
-                .fr-calculator__form-group
-                    label.fr-calculator__label Доход с косметики:<span> i </span>
-                        .fr-calculator__popup Продажи косметики не менее 15% с оборота. С учётом наценки на косметику в 200%, прибыль от продажи косметики получается 10% от оборота по услугам.
-                    .fr-calculator__input-deco ₽
-                    input#fc-cosmetics.fr-calculator__input(type="text" value="45000" disabled)
-
-
-            .fr-calculator__right-column
                 .fr-calculator__form-group
                     label.fr-calculator__label Процент мастера:
                     //- <span> i </span>
@@ -126,6 +113,18 @@ body
                         option(value="usn3") УСН с безнала
                         option(value="patent") Патент
                         //- option(value="profit") Доход - расход
+
+                .fr-calculator__form-group
+                    label.fr-calculator__label Расходники:<span> i </span>
+                        .fr-calculator__popup Расходы на оказание услуги (угощение, лезвия, салфетки и т. п.)
+                    .fr-calculator__input-deco ₽
+                    input#fc-consumables.fr-calculator__input(type="text" value="100500" disabled)
+
+                .fr-calculator__form-group
+                    label.fr-calculator__label Доход с косметики:<span> i </span>
+                        .fr-calculator__popup Продажи косметики не менее 15% с оборота. С учётом наценки на косметику в 200%, прибыль от продажи косметики получается 10% от оборота по услугам.
+                    .fr-calculator__input-deco ₽
+                    input#fc-cosmetics.fr-calculator__input(type="text" value="45000" disabled)
                         
                 .fr-calculator__form-group
                     label.fr-calculator__label Эквайринг:<span> i </span>

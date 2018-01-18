@@ -175,7 +175,7 @@ $(document).ready(function() {
 
     // setting profit field
     function setProfit(profit) {
-        $("#fc-profit").html(parseInt(profit) + " <span>рублей</span>");
+        $("#fc-profit").html(parseInt(profit) + "<span>  рублей</span>");
     }
 
     calcProfit();
