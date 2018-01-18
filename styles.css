@@ -488,6 +488,14 @@ template {
   .fr-calculator__range {
     display: block;
     width: 45%; }
+  .fr-calculator__select {
+    display: block;
+    width: 100%;
+    margin-bottom: 3px;
+    padding: 8px 10px;
+    font-size: 24px; }
+    .fr-calculator__select option {
+      padding: 8px 10px; }
   .fr-calculator__scale {
     position: relative;
     top: 2px;

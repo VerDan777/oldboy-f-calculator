@@ -69,8 +69,15 @@ $(document).ready(function() {
     var $expenses       = $("#fc-expenses");
     var $reception      = $("#fc-receptionist");
     var $tax            = $("#fc-tax");
+    var $consumables    = $("#fc-consumables");
+    var $acquiring      = $("#fc-acquiring");
     var $cosmetics      = $("#fc-cosmetics");
     var $royalty        = $("#fc-royalty");
+
+    // tax event handler
+    $tax.on("change", function() {
+        calcProfit();
+    })
     
     function calcProfit() {
         // getting field values
@@ -81,14 +88,17 @@ $(document).ready(function() {
         var clientsNum      = parseInt($clientsNum.val());
         var expenses        = parseInt($expenses.val());
         var reception       = parseInt($reception.val());
-        var tax             = parseInt($tax.val());
 
         // counting profit
         var VISITS_PER_MONTH = 1;
         var income = clientsNum * avgCheck * VISITS_PER_MONTH;
         var barbersSalary = barberShare * income / 100;
         var shavingCosts = 30 * clientsNum * VISITS_PER_MONTH;
-        var taxInMoney = income * tax / 100;
+        setConsumables(shavingCosts);
+        var acquiring = income * 0.8 / 100;
+        setAcquiring(acquiring);
+        // var taxInMoney = income * tax / 100;
+        var taxInMoney = calcTax(income);
 
         var cosmetics = calcCosmetics(income);
         
@@ -103,8 +113,44 @@ $(document).ready(function() {
                     - barbersSalary 
                     - taxInMoney
                     + cosmetics
-                    - royalty;
+                    - royalty
+                    - acquiring;
         setProfit(profit);
+    }
+
+    // calculating tax
+    function calcTax(income) {
+        var taxInMoney;
+        switch ($tax.val()) {
+            case "usn6":
+                taxInMoney = income * 6 / 100;
+                break;
+            case "usn3":
+                taxInMoney = income * 3 / 100;
+                break;
+            case "patent":
+                taxInMoney = 56000 / 12;
+                break;
+            case "profit":
+            break;
+            
+            default:
+                taxInMoney = 0;
+                break;
+        }
+        console.log($tax.val());
+        return parseInt(taxInMoney);
+        // return 0;
+    }
+
+    // seting consumables
+    function setConsumables(costs) {
+        $consumables.val(costs);
+    }
+
+    // seting acquiring
+    function setAcquiring(costs) {
+        $acquiring.val(costs);
     }
 
     // calculating cosmetics revenue
